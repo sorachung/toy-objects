@@ -102,5 +102,5 @@ toys.push(rubiksCube);
 toys.push(giantGiraffe);
 
 for (toy of toys) {
-  console.log(toy.name);
+  console.log(`The ${toy.name} by ${toy.brand} is $${toy.price}`);
 }
