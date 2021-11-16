@@ -1,13 +1,14 @@
 const toys = [
   {
     id: 1,
+    inStock: true,
     upc: 2425323324,
     barcode: "234-cgrw-0001",
     name: "Wooden Blocks",
     ageRange: [0, 100],
     category: "blocks",
     gender: "all",
-    brand: "noBrand",
+    brand: "Mattel",
     numOfPlayers: 1,
     price: 5.0,
     weight: 5, //oz
@@ -19,13 +20,14 @@ const toys = [
   },
   {
     id: 2,
+    inStock: false,
     upc: 2425323325,
     barcode: "234-cgrw-0002",
     name: "Wooden Chess Set",
     ageRange: [5, 100],
     category: "games",
     gender: "all",
-    brand: "noBrand",
+    brand: "Chess Master",
     numOfPlayers: 2,
     price: 20.0,
     weight: 10, //oz
@@ -37,6 +39,7 @@ const toys = [
   },
   {
     id: 3,
+    inStock: true,
     upc: 2425323326,
     barcode: "234-cgrw-0003",
     name: "Cat Lover's Jigsaw Puzzle",
@@ -57,6 +60,7 @@ const toys = [
 
 const rubiksCube = {
   id: 4,
+  inStock: true,
   upc: 630509932818,
   barcode: "234-cgrw-0004",
   name: "Rubik's Cube",
@@ -76,6 +80,7 @@ const rubiksCube = {
 
 const giantGiraffe = {
   id: 5,
+  inStock: false,
   upc: 490860221248,
   barcode: "234-cgrw-0007",
   name: "Melissa & Doug Giant Giraffe - Lifelike Stuffed Animal",
