@@ -109,3 +109,11 @@ for (const toy of toys) {
   toy.price *= 1.05;
   console.log(`The ${toy.name} costs $${toy.price}`);
 }
+
+const toyToFind = 2;
+
+for (const toy of toys) {
+  if (toy.id === toyToFind) {
+    console.log(toy.name, toy);
+  }
+}
