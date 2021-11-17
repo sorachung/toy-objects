@@ -101,6 +101,11 @@ const giantGiraffe = {
 toys.push(rubiksCube);
 toys.push(giantGiraffe);
 
-for (toy of toys) {
+for (const toy of toys) {
   console.log(`The ${toy.name} by ${toy.brand} is $${toy.price}`);
+}
+
+for (const toy of toys) {
+  toy.price *= 1.05;
+  console.log(`The ${toy.name} costs $${toy.price}`);
 }
