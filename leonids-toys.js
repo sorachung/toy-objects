@@ -116,6 +116,7 @@ const removeProduct = (id) => {
     if(toys[i].id === id) {
       console.log(`removing ${toys[i].name}`)
       toys.splice(i, 1)
+      break;
     }
   }
   
