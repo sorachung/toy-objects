@@ -112,9 +112,9 @@ console.log(toyNames)
 
 
 const removeProduct = (id) => {
-  for (let i = 0; i < toys.length; i++) {
-    if(toys[i].id === id) {
-      console.log(`removing ${toys[i].name}`)
+  for (const toy of toys) {
+    if(toy.id === id) {
+      console.log(`removing ${toy.name}`)
       toys.splice(i, 1)
       break;
     }
@@ -122,5 +122,17 @@ const removeProduct = (id) => {
   
 }
 
+const removeProduct2 = (id) => {
+  for (let i = 0; id >= toys[i].id; i++) {
+    console.log(i)
+    if(toys[i].id === id) {
+      console.log(`removing ${toys[i].name}`)
+      toys.splice(i, 1)
+    }
+  }
+  
+}
+
 removeProduct(2);
-console.log(toys)
+removeProduct2(2)
+// console.log(toys)
