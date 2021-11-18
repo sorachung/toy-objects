@@ -111,3 +111,15 @@ toys.forEach(toy => toyNames.push(toy.name))
 console.log(toyNames)
 
 
+const removeProduct = (id) => {
+  for (let i = 0; i < toys.length; i++) {
+    if(toys[i].id === id) {
+      console.log(`removing ${toys[i].name}`)
+      toys.splice(i, 1)
+    }
+  }
+  
+}
+
+removeProduct(2);
+console.log(toys)
