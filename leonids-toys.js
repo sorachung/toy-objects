@@ -67,22 +67,24 @@ const giantGiraffe = {
 toys.push(rubiksCube);
 toys.push(giantGiraffe);
 
-// for (const toy of toys) {
-//   console.log(`The ${toy.name} by ${toy.brand} is $${toy.price}`);
-// }
+//list all toys with brand and price
+for (const toy of toys) {
+  console.log(`The ${toy.name} by ${toy.brand} is $${toy.price.toFixed(2)}`);
+}
 
-// for (const toy of toys) {
-//   toy.price *= 1.05;
-//   console.log(`The ${toy.name} costs $${toy.price}`);
-// }
+//increase price of all toys by 5%
+for (const toy of toys) {
+  toy.price *= 1.05;
+  console.log(`The ${toy.name} costs $${toy.price.toFixed(2)}`);
+}
 
 const toyToFind = 2;
 
-// for (const toy of toys) {
-//   if (toy.id === toyToFind) {
-//     console.log(toy.name, toy);
-//   }
-// }
+for (const toy of toys) {
+  if (toy.id === toyToFind) {
+    console.log("found your toy!:,", toy.name, toy);
+  }
+}
 
 function addToyToInventory(toyObject) {
   const maxId = toys[toys.length - 1].id;
@@ -110,19 +112,8 @@ const toyNames = []
 toys.forEach(toy => toyNames.push(toy.name))
 console.log(toyNames)
 
-
+//function to remove product from inventory
 const removeProduct = (id) => {
-  for (const toy of toys) {
-    if(toy.id === id) {
-      console.log(`removing ${toy.name}`)
-      toys.splice(i, 1)
-      break;
-    }
-  }
-  
-}
-
-const removeProduct2 = (id) => {
   for (let i = 0; id >= toys[i].id; i++) {
     console.log(i)
     if(toys[i].id === id) {
@@ -130,9 +121,7 @@ const removeProduct2 = (id) => {
       toys.splice(i, 1)
     }
   }
-  
 }
 
 removeProduct(2);
-removeProduct2(2)
-// console.log(toys)
+console.log(toys)
